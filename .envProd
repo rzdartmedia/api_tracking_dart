@@ -1,9 +1,11 @@
 # Server Configuration
+
 HOST=
 PORT=
 TZ=Asia/Jakarta
 
 # Config Database Postgres
+
 DBHOST=
 DBUSER=
 DBPASSWORD=
@@ -12,12 +14,19 @@ DBPORT=
 DBDRIVER=
 
 # authentications
+
 ACCESS_TOKEN_KEY=
 
 # 7 hari
+
 ACCESS_TOKEN_AGE=
 
 PREFIX=
 
 URLFCM=
 TOKENAUTHORIZATIONFCM=
+
+URLSMS=
+UID=
+PWD=
+SC=
