@@ -1,4 +1,5 @@
 const { SendNotificationFcm } = require("../../services/FCM/SendNotification");
+const SendSMSApi = require("../../services/SMS/SendSMSApi");
 
 class LogTrackerHandler {
     constructor({
@@ -47,8 +48,7 @@ class LogTrackerHandler {
                         break;
 
                     case 'sms':
-                        console.log('SMS')
-                        console.log(channel.message + no_handphone)
+                        await SendSMSApi({ number: no_handphone, message: channel.message });
                         break;
 
                     case 'email':
