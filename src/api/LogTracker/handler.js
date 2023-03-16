@@ -1,3 +1,4 @@
+const SendEmailAPI = require("../../services/Email/SendEmailAPI");
 const { SendNotificationFcm } = require("../../services/FCM/SendNotification");
 const SendSMSApi = require("../../services/SMS/SendSMSApi");
 
@@ -52,8 +53,7 @@ class LogTrackerHandler {
                         break;
 
                     case 'email':
-                        console.log('Email')
-                        console.log(channel.message + email)
+                        await SendEmailAPI({ email, subject: channel.title, message: channel.message })
                         break;
                 }
             })

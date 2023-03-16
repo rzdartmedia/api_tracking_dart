@@ -29,6 +29,7 @@ async function SendSMSApi({ number, message }) {
     const result = await axios(config);
     console.log(`UID ${process.env.UID}`)
     console.log(`PWD ${process.env.PASSWORD}`)
+    console.log(`Message ID ${messageId}`)
     console.log(`Send SMS to ${number}`)
     console.log(result.data);
 }
